@@ -4,6 +4,22 @@ INTERVAL=5
 DIR=$(dirname "$0")
 LOG="$DIR/monitor.log"
 
+touch "$LOG" 2>/dev/null
+if [ $? -ne 0 ]; then
+    echo "ОШИБКА: Нет прав на запись в файл $LOG" >&2
+    exit 1
+fi
+
+
+cleanup() {
+    echo
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Мониторинг остановлен пользователем."
+    echo "Лог-файл сохранён: $LOG"
+    exit 0
+}
+
+trap cleanup SIGINT
+
 while true; do
     TIME=$(date '+%Y-%m-%d %H:%M:%S')
     {
