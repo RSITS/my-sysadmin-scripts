@@ -1,0 +1,20 @@
+--- 2026-10-10 03:44:40 ---
+
+free -h:
+               всего        занят        своб      общая  буф/врем.   доступно
+Память:         14Gi       6,9Gi       992Mi       494Mi       7,8Gi       8,0Gi
+Подкачка:      4,0Gi       1,2Mi       4,0Gi
+
+df -h:
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            1,5G         3,4M  1,5G            1% /run
+/dev/nvme0n1p5   239G         139G   88G           62% /
+tmpfs            7,5G         431M  7,1G            6% /dev/shm
+tmpfs            5,0M          16K  5,0M            1% /run/lock
+efivarfs         128K          27K   97K           22% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    96M          32M   65M           33% /boot/efi
+tmpfs            1,5G         176K  1,5G            1% /run/user/1000
+/dev/nvme0n1p3   233G         193G   41G           83% /media/yura/D4F280EFF280D6E0
+
+uptime:
+ 03:44:40 up 2 days,  9:59,  1 user,  load average: 0,28, 0,44, 0,50
