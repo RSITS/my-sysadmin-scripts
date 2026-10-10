@@ -25,13 +25,13 @@ while true; do
     {
         echo "--- $TIME ---"
         echo
-        echo "free -h:"
+        echo "【1】 Состояние памяти (free -h):"
         free -h
         echo
-        echo "df -h:"
+        echo "【2】 Использование дисков (df -h):"
         df -h
         echo
-        echo "uptime:"
+        echo "【3】 Время работы системы (uptime):"
         uptime
         echo
     } >> "$LOG"
